@@ -1,0 +1,134 @@
+
+<html>
+<head>
+<title>Tourist Maps</title>
+
+</head>
+
+<body bgcolor="#F5FFF5">
+<script>
+function checkPlace()
+{
+    var input = document.getElementsByName("q")[0].value;
+    var options = document.getElementById("places").options;
+
+    for(var i=0; i<options.length; i++)
+    {
+        if(input.toLowerCase() == options[i].value.toLowerCase())
+        {
+            return true;
+        }
+    }
+
+    alert("Please select a tourist place from the list.");
+    return false;
+}
+</script>
+<center>
+<font size="8" color="#1B4332"><b>Contact Information</b></font>
+</center>
+
+<br>
+
+<font size="6" color="#2D6A4F">
+
+<b>District Tourism Promotion Council (DTPC)</font> </b><br><font size="4" >
+Phone: +91 4862 232248 <br>
+Email: info@dtpcidukki.com <br>
+Address: Civil Station, Painavu P.O., Idukki<br>
+Kerala 685603</font> <br>
+
+<br>
+
+<font size="6" color="#2D6A4F">
+<b>Kerala Tourism</font> </b><br><font size="4">
+Phone: +91 471 2321132 <br>
+Toll Free: 1800 425 4747 <br>
+</font>
+
+
+<br>
+<center>
+
+<font color="navy" size="6"><b>Tourist Location Maps</b></font>
+
+<br><br>
+
+<form action="https://www.google.com/maps"
+      method="get"
+      target="_blank"
+      onsubmit="return checkPlace();">
+
+<input
+list="places"
+name="q"
+size="35"
+placeholder="Search Tourist Place">
+
+<datalist id="places">
+
+<option value="Munnar">
+<option value="Vattavada">
+<option value="Ramakalmedu">
+<option value="Thekkady">
+<option value="Idukki Dam">
+<option value="Anchuruli">
+<option value="Meesapulimala">
+<option value="Hill View Park">
+<option value="Thoovanam Falls">
+<option value="Eravikulam National Park">
+<option value="Abraham's Spice Garden">
+<option value="Green Land Spice Garden">
+<option value="Government Botanical Garden Munnar">
+<option value="KFDC Floriculture Centre">
+<option value="Mangala Devi Kannagi Temple">
+<option value="Sholamallay Bungalow">
+<option value="Talayar Valley Bungalow">
+<option value="Lockhart Bungalow">
+<option value="Macofa Chocolate Factory">
+<option value="Moolamattom Power House">
+<option value="Carmelagiri Elephant Park">
+<option value="Swiss Dairy Farm">
+<option value="Lockhart Tea Factory">
+<option value="Blossom International Park">
+<option value="Cheeyappara Waterfalls">
+<option value="Valara Waterfalls">
+<option value="Murikkady">
+<option value="Ayyapancoil Hanging Bridge">
+<option value="Calvary Mount">
+<option value="Keezharkuthu Waterfalls">
+<option value="Pothamedu View Point">
+<option value="Mattupetty Dam">
+<option value="Anamudi Peak">
+<option value="Chinnar Wildlife Sanctuary">
+<option value="Kanthalloor">
+<option value="Marayoor">
+<option value="Lockhart Gap View Point">
+<option value="Aanakkulam">
+<option value="Panchalimedu">
+<option value="Lakkam Waterfalls">
+
+</datalist>
+
+<input type="submit" value="Search Map">
+
+</form>
+
+</center>
+<script>
+function showmap()
+{
+    var p= document.getElementById("place").value;
+	document.getElementById("map").src="https://maps.google.com/map?q="+encodeURLComponent(p)+"&output=embed";
+	}
+	</script>
+
+ </body>
+</html>
+
+
+
+
+
+
+
