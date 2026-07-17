@@ -1,10 +1,69 @@
 
 
+<!DOCTYPE html>
 <html>
-<body background="color.png">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<font color="#1B4332" size="4"><b>Tourist Places</b></font>
+<style>
+body{
+    margin:0;
+    padding:15px;
+    font-family:Arial,sans-serif;
+    background:#E8F5E9;
+    overflow-y:auto;
+}
 
+h2{
+    color:#1B4332;
+    text-align:center;
+    margin-top:0;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    border:2px solid #1B4332;
+    border-radius:8px;
+    box-sizing:border-box;
+    margin-bottom:10px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#1B4332;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+button:hover{
+    background:#2D6A4F;
+}
+
+a{
+    display:block;
+    padding:8px 10px;
+    color:#1B4332;
+    text-decoration:none;
+    border-radius:6px;
+    margin-bottom:3px;
+    font-weight:bold;
+}
+
+a:hover{
+    background:#95D5B2;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Tourist Places</h2>
 <br><br>
 
 <input list="places" id="searchBox" placeholder="Search tourist place">
