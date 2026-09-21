@@ -80,12 +80,11 @@ boating, wildlife watching and peaceful landscapes throughout the district.
 
 <center>
 
-<div class="mapTitle">
-Tourist Location Maps
-</div>
+<font color="navy" size="6">
+<b>Tourist Location Maps</b>
+</font>
 
-<br>
-
+<br><br>
 
 <form
     action="https://www.google.com/maps"
@@ -94,16 +93,13 @@ Tourist Location Maps
     onsubmit="return checkPlace();"
 >
 
-
 <input
     list="places"
     id="place"
     name="q"
-    class="mapSearch"
     placeholder="Search Tourist Place"
-    autocomplete="off"
+    style="width:190px; height:42px; padding:8px 12px; box-sizing:border-box; border:2px solid #1B4332; border-radius:10px;"
 >
-
 
 <datalist id="places">
 
@@ -150,18 +146,17 @@ Tourist Location Maps
 
 </datalist>
 
+<br>
 
 <input
     type="submit"
     value="Search Map"
-    class="mapButton"
+    style="width:190px; height:42px; margin-top:8px; padding:8px; background:#1B4332; color:white; border:none; border-radius:10px;"
 >
-
 
 </form>
 
 </center>
-
 
 <script>
 
