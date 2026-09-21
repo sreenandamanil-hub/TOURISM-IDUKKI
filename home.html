@@ -1,41 +1,192 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Idukki Tourism</title>
 
 <style>
-body{
-    margin:15px;
-    background:#B7E4C7;
-    font-family:Arial,sans-serif;
-    line-height:1.6;
+
+body {
+    margin: 15px;
+    background: #B7E4C7;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
-h2{
-    color:#1B4332;
+
+h2 {
+    color: #1B4332;
 }
-p{
-    font-size:18px;
-    text-align:justify;
+
+p {
+    font-size: 18px;
+    text-align: justify;
 }
+
+.mapTitle {
+    color: navy;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.mapSearch {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.mapButton {
+    padding: 10px 18px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <h2>Welcome to Idukki Tourism</h2>
 
-<p>
-Welcome to Idukki, one of the most beautiful hill districts in Kerala. Known for its green mountains, cool climate, waterfalls, rivers and wildlife, Idukki is a paradise for nature lovers.
-</p>
 
 <p>
-Popular destinations include Munnar, Ramakkalmedu, Vagamon, Thekkady, Idukki Dam, tea plantations, spice gardens and wildlife sanctuaries.
+Welcome to Idukki, one of the most beautiful hill districts in Kerala.
+Known for its green mountains, cool climate, waterfalls, rivers and
+wildlife, Idukki is a paradise for nature lovers.
 </p>
 
+
 <p>
-Idukki is also rich in history and culture. Visitors can enjoy trekking, boating, wildlife watching and peaceful landscapes throughout the district.
+Popular destinations include Munnar, Ramakkalmedu, Vagamon, Thekkady,
+Idukki Dam, tea plantations, spice gardens and wildlife sanctuaries.
 </p>
+
+
+<p>
+Idukki is also rich in history and culture. Visitors can enjoy trekking,
+boating, wildlife watching and peaceful landscapes throughout the district.
+</p>
+
+
+<center>
+
+<div class="mapTitle">
+Tourist Location Maps
+</div>
+
+<br>
+
+
+<form
+    action="https://www.google.com/maps"
+    method="get"
+    target="_blank"
+    onsubmit="return checkPlace();"
+>
+
+
+<input
+    list="places"
+    id="place"
+    name="q"
+    class="mapSearch"
+    placeholder="Search Tourist Place"
+    autocomplete="off"
+>
+
+
+<datalist id="places">
+
+<option value="Munnar">
+<option value="Vattavada">
+<option value="Ramakkalmedu">
+<option value="Thekkady">
+<option value="Idukki Dam">
+<option value="Anchuruli">
+<option value="Meesapulimala">
+<option value="Hill View Park">
+<option value="Thoovanam Falls">
+<option value="Eravikulam National Park">
+<option value="Abraham's Spice Garden">
+<option value="Green Land Spice Garden">
+<option value="Government Botanical Garden Munnar">
+<option value="KFDC Floriculture Centre">
+<option value="Mangala Devi Kannagi Temple">
+<option value="Sholamallay Bungalow">
+<option value="Talayar Valley Bungalow">
+<option value="Lockhart Bungalow">
+<option value="Macofa Chocolate Factory">
+<option value="Moolamattom Power House">
+<option value="Carmelagiri Elephant Park">
+<option value="Swiss Dairy Farm">
+<option value="Lockhart Tea Factory">
+<option value="Blossom International Park">
+<option value="Cheeyappara Waterfalls">
+<option value="Valara Waterfalls">
+<option value="Murikkady">
+<option value="Ayyapancoil Hanging Bridge">
+<option value="Calvary Mount">
+<option value="Keezharkuthu Waterfalls">
+<option value="Pothamedu View Point">
+<option value="Mattupetty Dam">
+<option value="Anamudi Peak">
+<option value="Chinnar Wildlife Sanctuary">
+<option value="Kanthalloor">
+<option value="Marayoor">
+<option value="Lockhart Gap View Point">
+<option value="Aanakkulam">
+<option value="Panchalimedu">
+<option value="Lakkam Waterfalls">
+
+</datalist>
+
+
+<input
+    type="submit"
+    value="Search Map"
+    class="mapButton"
+>
+
+
+</form>
+
+</center>
+
+
+<script>
+
+function checkPlace() {
+
+    var place =
+        document.getElementById("place").value.trim();
+
+
+    if (place === "") {
+
+        alert("Please enter or select a tourist place.");
+
+        return false;
+
+    }
+
+
+    return true;
+
+}
+
+</script>
+
 
 </body>
+
 </html>
